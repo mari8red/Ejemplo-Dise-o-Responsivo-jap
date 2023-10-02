@@ -1,0 +1,41 @@
+/* Con grid podemos crear un layout de columnas y otras funcionalidades más */
+/* Más info en el siguiente enlace => https://www.w3schools.com/css/css_grid.asp*/
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+/* Con flex podemos determinar cómo se acomodan los elementos internos a un contenedor */
+/* Más info en el siguiente enlace => https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox */
+.flex-container {
+  display: flex;
+  /* Establecer la propiedad en "wrap" permite que los elementos pasen para abajo si desbordan el tamaño del contenedor */
+  flex-wrap: wrap;
+  gap: 10px;
+
+  background-color: beige;
+}
+
+p {
+  background-color: aquamarine;
+}
+
+/* CSS para generar cada cuadrado */
+.square {
+  display: flex;
+  /* justify-content y align-items nos permiten centrar el contenido interno usando flex */
+  align-items: center;
+  justify-content: center;
+  background-color: aliceblue;
+  border: 2px solid black;
+  height: 100px;
+  width: 100px;
+}
+
+/* Con media queries podemos cambiar totalmente el diseño de nuestro sitio en función del tamaño de la pantalla */
+/* Más info de media queries en el siguiente enlace => https://www.w3schools.com/css/css3_mediaqueries.asp*/
+@media only screen and (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
