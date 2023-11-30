@@ -6,20 +6,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ejemplo Diseño Responsivo</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Ejemplo de Diseño Responsive</h1>
+    <nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Inicio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Contenido (form) para pantallas medianas y pequeñas -->
+          <form class="search-form-md-sm d-flex d-lg-none" role="search">
+            <input class="form-control me-2 mt-2" type="search" placeholder="¿Qué buscas?" aria-label="Search">
+          </form>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Primero</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Segundo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tercero</a>
+            </li>
+            <!-- Contenido (Opciones) para pantallas medianas y pequeñas -->
+            <li class="nav-item dropdown d-lg-none">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Opciones
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="https://image.jimcdn.com/app/cms/image/transf/dimension=210x1024:format=jpg/path/s387a09a9a186dec8/image/i2617307a33efd73c/version/1353322222/image.jpg">1. Campanita</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="https://image.jimcdn.com/app/cms/image/transf/dimension=210x1024:format=jpg/path/s387a09a9a186dec8/image/i974ce865e0bab999/version/1353322054/image.jpg">2. Wendy</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="https://image.jimcdn.com/app/cms/image/transf/dimension=126x1024:format=jpg/path/s387a09a9a186dec8/image/i9fc9179022342b60/version/1353322286/image.jpg">3. Garfio</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="https://image.jimcdn.com/app/cms/image/transf/dimension=240x1024:format=jpg/path/s387a09a9a186dec8/image/i304ab694f846155f/version/1508240748/image.jpg">4. Nuncajamás</a></li>
+              </ul>
+            </li>
+          </ul>
+          <!-- Contenido (form) para pantallas grandes -->
+          <form class="search-form-lg d-flex d-md-none d-sm-none" role="search">
+            <input class="form-control me-2" type="search" placeholder="¿Qué buscas?" aria-label="Search">
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <h1 class="text-center">
+      <a class="link-dark" href="https://image.jimcdn.com/app/cms/image/transf/dimension=128x1024:format=jpg/path/s387a09a9a186dec8/image/i1c54c231498fb023/version/1432815702/image.jpg">Peter Pan</a>
+    </h1>
+    <div id="carouselExampleInterval" class="carousel slide text-center d-flex mx-auto w-50" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="2000">
+          <p>Para ver cómo el diseño se adapta, puedes reducir el tamaño de la ventana</p>
+        </div>
+        <div class="carousel-item active" data-bs-interval="2000">
+           <p>o utilizar las "Herramientas del Desarrollador"</p>
+        </div>
+        <div class="carousel-item active" data-bs-interval="2000">
+          <p>para poder elegir una resolución distinta a la de tu pantalla.</p>
+        </div>
+      </div>
+    </div>
     <div class="grid-container">
-      <p>
-        Para ver cómo el diseño se adapta, puedes reducir el tamaño de la
-        ventana o utilizar las "Herramientas del Desarrollador" para poder
-        elegir una resolución distinta a la de tu pantalla.
-      </p>
-      <div class="flex-container">
+      <!-- Contenido (card) para pantallas grandes -->
+      <div class="card m-2 d-lg-flex d-md-none d-sm-none" style="width: 18rem; border:none;">
+        <ul class="list-group list-group-flush bg-dark pt-2 pb-2" data-bs-theme="dark">
+          <li class="list-group-item"><a class="list-group-item" href="https://image.jimcdn.com/app/cms/image/transf/dimension=210x1024:format=jpg/path/s387a09a9a186dec8/image/i2617307a33efd73c/version/1353322222/image.jpg">1. Campanita</a></li>
+          <li class="list-group-item"><a class="list-group-item" href="https://image.jimcdn.com/app/cms/image/transf/dimension=210x1024:format=jpg/path/s387a09a9a186dec8/image/i974ce865e0bab999/version/1353322054/image.jpg">2. Wendy</a></li>
+          <li class="list-group-item"><a class="list-group-item" href="https://image.jimcdn.com/app/cms/image/transf/dimension=126x1024:format=jpg/path/s387a09a9a186dec8/image/i9fc9179022342b60/version/1353322286/image.jpg">3. Garfio</a></li>
+          <li class="list-group-item"><a class="list-group-item" href="https://image.jimcdn.com/app/cms/image/transf/dimension=240x1024:format=jpg/path/s387a09a9a186dec8/image/i304ab694f846155f/version/1508240748/image.jpg">4. Nuncajamás</a></li>
+        </ul>
+      </div>
+      <div class="row d-flex flex-container">
         <!-- El contenido de aquí se agrega mediante JS -->
       </div>
     </div>
 
     <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
 </html>
